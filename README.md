@@ -1,6 +1,6 @@
 # Description
 
-My Vim config.
+My Vim config. Expect frequent changes.
 
 # Installation
 
@@ -11,5 +11,3 @@ Clone this repo:
 Then, either create a new .vimrc file or add the following line to your existing one:
 
     source ~/.vim/vimrc
-
-
