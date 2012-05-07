@@ -6,6 +6,7 @@ filetype off
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
+" Required by vundle
 Bundle 'gmarik/vundle'
 
 " Custom bundle list

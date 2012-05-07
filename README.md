@@ -7,6 +7,11 @@ My Vim config. Expect frequent changes.
 Clone this repo:
 
     git clone git://github.com/teoulas/vimfiles.git ~/.vim
+    
+Install [Vundle](https://github.com/gmarik/vundle)
+
+    git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
+    vim +BundleInstall +qall
 
 Then, either create a new .vimrc file or add the following line to your existing one:
 
