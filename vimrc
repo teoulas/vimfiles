@@ -12,14 +12,14 @@ Bundle 'gmarik/vundle'
 " Custom bundle list
 Bundle "ack.vim"
 Bundle "bufexplorer.zip"
-Bundle "Command-T"
+Bundle "wincent/Command-T"
 Bundle "cucumber.zip"
 Bundle "endwise.vim"
 Bundle "fugitive.vim"
 Bundle "tpope/vim-haml"
 Bundle "othree/html5.vim"
 Bundle "The-NERD-tree"
-Bundle "rails.vim"
+Bundle "tpope/vim-rails"
 Bundle "surround.vim"
 Bundle "scrooloose/syntastic"
 Bundle "tpope/vim-bundler"
@@ -44,6 +44,8 @@ set hlsearch          " highlight searches
 set relativenumber    " add relative line numbers
 set ruler             " show row/col at the bottom right
 
+set nowrap            " no wrapping
+
 "indent settings
 set tabstop=2
 set shiftwidth=2
@@ -51,7 +53,33 @@ set softtabstop=2
 set expandtab
 set autoindent
 
+"status line
+set statusline=%f
+set statusline+=%{fugitive#statusline()}
+set statusline+=%{exists('g:loaded_rvm')?rvm#statusline():''}
+set statusline+=%c,
+set statusline+=%l/%L
+set statusline+=\ %P
+
+"remove GUI toolbar
+set guioptions-=T
+
 syntax on
+
+" GUI settings
+if has("gui_running")
+  colorscheme railscasts
+  set linespace=4
+  set lines=40 columns=120
+  set guifont=Terminus\ 11
+endif
+
+"keyboard
+let mapleader = ","
+
+nnoremap <leader>b :BufExplorer<cr>
+nnoremap <leader>t :CommandT<cr>
+silent! nmap <silent> <leader>p :NERDTreeToggle<cr>
 
 " Strip trailing whitespace
 function! <SID>StripTrailingWhitespaces()
