@@ -16,3 +16,9 @@ Install [Vundle](https://github.com/gmarik/vundle)
 Then, either create a new .vimrc file or add the following line to your existing one:
 
     source ~/.vim/vimrc
+
+If you want to use Command-T you have to compile the C extension:
+
+    cd ~/.vim/bundle/Command-T/ruby/command-t
+    ruby extconf.rb
+    make
