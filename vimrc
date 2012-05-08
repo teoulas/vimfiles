@@ -72,6 +72,11 @@ if has("gui_running")
   set linespace=4
   set lines=40 columns=120
   set guifont=Terminus\ 11
+
+  if has("gui_mac") || has("gui_macvim")
+    set guifont=Terminus:h14
+    set noantialias
+  endif
 endif
 
 "keyboard
