@@ -57,6 +57,7 @@ set autoindent
 set statusline=%f
 set statusline+=%{fugitive#statusline()}
 set statusline+=%{exists('g:loaded_rvm')?rvm#statusline():''}
+set statusline+=%=        "left/right separator
 set statusline+=%c,
 set statusline+=%l/%L
 set statusline+=\ %P
