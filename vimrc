@@ -66,6 +66,8 @@ set guioptions-=T
 
 syntax on
 
+let NERDTreeMinimalUI=1
+
 " GUI settings
 if has("gui_running")
   colorscheme railscasts
