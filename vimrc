@@ -88,6 +88,9 @@ nnoremap <leader>b :BufExplorer<cr>
 nnoremap <leader>t :CommandT<cr>
 silent! nmap <silent> <leader>p :NERDTreeToggle<cr>
 
+command W w
+command Q q
+
 " Strip trailing whitespace
 function! <SID>StripTrailingWhitespaces()
   " Preparation: save last search, and cursor position.
