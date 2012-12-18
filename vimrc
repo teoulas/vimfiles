@@ -72,9 +72,9 @@ let NERDTreeMinimalUI=1
 " GUI settings
 if has("gui_running")
   colorscheme railscasts
-  set linespace=4
+  set linespace=3
   set lines=40 columns=120
-  set guifont=Terminus\ 11
+  set guifont=Ubuntu\ Mono\ 11
 
   if has("gui_mac") || has("gui_macvim")
     set guifont=Terminus:h14
