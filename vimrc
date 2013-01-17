@@ -79,6 +79,8 @@ if has("gui_running")
   if has("gui_mac") || has("gui_macvim")
     set guifont=Terminus:h14
   endif
+else
+  set mouse=a
 endif
 
 "keyboard
