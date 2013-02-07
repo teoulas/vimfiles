@@ -77,7 +77,7 @@ if has("gui_running")
   set guifont=Terminus\ 11
 
   if has("gui_mac") || has("gui_macvim")
-    set guifont=Terminus:h14
+    set guifont=Ubuntu\ Mono:h14
   endif
 endif
 
