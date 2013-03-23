@@ -8,14 +8,14 @@ Clone this repo:
 
     git clone git://github.com/teoulas/vimfiles.git ~/.vim
     
-Install [Vundle](https://github.com/gmarik/vundle)
+Create a new .vimrc file or add the following line to your existing one:
+
+    source ~/.vim/vimrc
+
+Install [Vundle](https://github.com/gmarik/vundle) and the bundled plugins:
 
     git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
     vim +BundleInstall +qall
-
-Then, either create a new .vimrc file or add the following line to your existing one:
-
-    source ~/.vim/vimrc
 
 If you want to use Command-T you have to compile the C extension:
 
