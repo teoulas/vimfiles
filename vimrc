@@ -12,7 +12,7 @@ Bundle 'gmarik/vundle'
 " Custom bundle list
 Bundle "ack.vim"
 Bundle "bufexplorer.zip"
-Bundle "wincent/Command-T"
+Bundle "kien/ctrlp.vim"
 Bundle "cucumber.zip"
 Bundle "endwise.vim"
 Bundle "fugitive.vim"
@@ -87,7 +87,7 @@ endif
 let mapleader = ","
 
 nnoremap <leader>b :BufExplorer<cr>
-nnoremap <leader>t :CommandT<cr>
+nnoremap <leader>t :CtrlPMixed<cr>
 silent! nmap <silent> <leader>p :NERDTreeToggle<cr>
 
 command W w
