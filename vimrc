@@ -81,6 +81,7 @@ if has("gui_running")
   endif
 else
   set mouse=a
+  highlight Search cterm=standout ctermbg=none
 endif
 
 "keyboard
