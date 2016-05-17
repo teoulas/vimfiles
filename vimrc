@@ -41,10 +41,15 @@ set showmode          " show current mode down the bottom
 set incsearch         " find the next match as we type the search
 set hlsearch          " highlight searches
 
-set relativenumber    " add relative line numbers
+set relativenumber    " add relative line numbers - SLOW
+set cursorline        " underline current (cursor) line - SLOW
 set ruler             " show row/col at the bottom right
 
 set nowrap            " no wrapping
+
+" optimization settings to alleviate sluginess
+set re=1              " older regex engine is faster for Ruby regexes
+set lazyredraw
 
 "indent settings
 set tabstop=2
