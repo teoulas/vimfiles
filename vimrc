@@ -28,7 +28,6 @@ Bundle "itspriddle/vim-jquery"
 Bundle "hallison/vim-ruby-sinatra"
 Bundle "vim-ruby/vim-ruby"
 Bundle "tpope/vim-rvm"
-Bundle "railscasts"
 " End of bundle list
 
 filetype plugin indent on
@@ -74,20 +73,9 @@ syntax on
 
 let NERDTreeMinimalUI=1
 
-" GUI settings
-if has("gui_running")
-  colorscheme railscasts
-  set linespace=3
-  set lines=40 columns=120
-  set guifont=Ubuntu\ Mono\ 11
-
-  if has("gui_mac") || has("gui_macvim")
-    set guifont=Ubuntu\ Mono:h14
-  endif
-else
-  set mouse=a
-  highlight Search cterm=standout ctermbg=none
-endif
+colorscheme default
+set mouse=a
+highlight Search cterm=standout ctermbg=none
 
 "keyboard
 let mapleader = ","
