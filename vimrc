@@ -87,6 +87,11 @@ silent! nmap <silent> <leader>p :NERDTreeToggle<cr>
 command W w
 command Q q
 
+"greek keymap, CTRL+6 to switch
+set keymap=greek_utf-8
+set iminsert=0
+set imsearch=-1
+
 " Strip trailing whitespace
 function! <SID>StripTrailingWhitespaces()
   " Preparation: save last search, and cursor position.
