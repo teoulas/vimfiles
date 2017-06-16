@@ -13,7 +13,7 @@ Bundle 'gmarik/vundle'
 Bundle "ack.vim"
 Bundle "bufexplorer.zip"
 Bundle "kien/ctrlp.vim"
-Bundle "cucumber.zip"
+" Bundle "cucumber.zip"
 Bundle "endwise.vim"
 Bundle "fugitive.vim"
 Bundle "tpope/vim-haml"
@@ -22,12 +22,12 @@ Bundle "The-NERD-tree"
 Bundle "tpope/vim-rails"
 Bundle "surround.vim"
 Bundle "scrooloose/syntastic"
-Bundle "tpope/vim-bundler"
+" Bundle "tpope/vim-bundler"
 Bundle "vim-coffee-script"
 Bundle "itspriddle/vim-jquery"
-Bundle "hallison/vim-ruby-sinatra"
+" Bundle "hallison/vim-ruby-sinatra"
 Bundle "vim-ruby/vim-ruby"
-Bundle "tpope/vim-rvm"
+" Bundle "tpope/vim-rvm"
 " End of bundle list
 
 filetype plugin indent on
@@ -84,8 +84,14 @@ nnoremap <leader>b :BufExplorer<cr>
 nnoremap <leader>t :CtrlPMixed<cr>
 silent! nmap <silent> <leader>p :NERDTreeToggle<cr>
 
+"command aliases for when I keep shift down a bit too long after the colon
 command W w
 command Q q
+
+"replace ack with ag
+if executable('ag')
+  let g:ackprg = 'ag --vimgrep'
+endif
 
 "greek keymap, CTRL+6 to switch
 set keymap=greek_utf-8
