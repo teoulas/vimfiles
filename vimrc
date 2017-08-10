@@ -1,6 +1,5 @@
-set nocompatible
-
 " Required by vundle
+set nocompatible
 filetype off
 
 set rtp+=~/.vim/bundle/vundle/
@@ -12,7 +11,7 @@ Bundle 'gmarik/vundle'
 " Custom bundle list
 Bundle "ack.vim"
 Bundle "bufexplorer.zip"
-Bundle "kien/ctrlp.vim"
+Bundle "ctrlpvim/ctrlp.vim"
 " Bundle "cucumber.zip"
 Bundle "endwise.vim"
 Bundle "fugitive.vim"
@@ -28,6 +27,7 @@ Bundle "itspriddle/vim-jquery"
 " Bundle "hallison/vim-ruby-sinatra"
 Bundle "vim-ruby/vim-ruby"
 " Bundle "tpope/vim-rvm"
+Bundle "jpo/vim-railscasts-theme"
 " End of bundle list
 
 filetype plugin indent on
@@ -45,6 +45,7 @@ set cursorline        " underline current (cursor) line - SLOW
 set ruler             " show row/col at the bottom right
 
 set nowrap            " no wrapping
+set colorcolumn=80    " but show a line at 80 chars
 
 " optimization settings to alleviate sluginess
 set re=1              " older regex engine is faster for Ruby regexes
@@ -73,7 +74,7 @@ syntax on
 
 let NERDTreeMinimalUI=1
 
-colorscheme default
+colorscheme railscasts
 set mouse=a
 highlight Search cterm=standout ctermbg=none
 
@@ -97,6 +98,9 @@ endif
 set keymap=greek_utf-8
 set iminsert=0
 set imsearch=-1
+
+" ctrlP plugin config
+let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
 
 " Strip trailing whitespace
 function! <SID>StripTrailingWhitespaces()
