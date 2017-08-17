@@ -9,8 +9,8 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 
 " Custom bundle list
-Bundle "ack.vim"
-Bundle "bufexplorer.zip"
+Bundle "mileszs/ack.vim"
+Bundle "jlanzarotta/bufexplorer"
 Bundle "ctrlpvim/ctrlp.vim"
 " Bundle "cucumber.zip"
 Bundle "endwise.vim"
@@ -76,7 +76,6 @@ let NERDTreeMinimalUI=1
 
 colorscheme railscasts
 set mouse=a
-highlight Search cterm=standout ctermbg=none
 
 "keyboard
 let mapleader = ","
@@ -98,6 +97,9 @@ endif
 set keymap=greek_utf-8
 set iminsert=0
 set imsearch=-1
+
+" Current filename in title
+set title
 
 " ctrlP plugin config
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
