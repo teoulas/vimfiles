@@ -81,8 +81,8 @@ set mouse=a
 let mapleader = ","
 
 nnoremap <leader>b :BufExplorer<cr>
-nnoremap <leader>t :CtrlPMixed<cr>
-silent! nmap <silent> <leader>p :NERDTreeToggle<cr>
+nnoremap <leader>p :CtrlPMixed<cr>
+silent! nmap <silent> <leader>t :NERDTreeToggle<cr>
 
 "command aliases for when I keep shift down a bit too long after the colon
 command W w
