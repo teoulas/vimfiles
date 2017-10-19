@@ -28,6 +28,7 @@ Bundle "itspriddle/vim-jquery"
 Bundle "vim-ruby/vim-ruby"
 " Bundle "tpope/vim-rvm"
 Bundle "jpo/vim-railscasts-theme"
+Bundle "ap/vim-css-color"
 " End of bundle list
 
 filetype plugin indent on
