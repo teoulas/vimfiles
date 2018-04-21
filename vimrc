@@ -23,6 +23,8 @@ Bundle "surround.vim"
 Bundle "scrooloose/syntastic"
 " Bundle "tpope/vim-bundler"
 Bundle "vim-coffee-script"
+Bundle 'pangloss/vim-javascript'
+Bundle 'mxw/vim-jsx'
 Bundle "itspriddle/vim-jquery"
 " Bundle "hallison/vim-ruby-sinatra"
 Bundle "vim-ruby/vim-ruby"
@@ -83,6 +85,7 @@ let mapleader = ","
 
 nnoremap <leader>b :BufExplorer<cr>
 nnoremap <leader>p :CtrlPMixed<cr>
+nnoremap <leader>a :Ack! <cword><cr>
 silent! nmap <silent> <leader>t :NERDTreeToggle<cr>
 
 "command aliases for when I keep shift down a bit too long after the colon
