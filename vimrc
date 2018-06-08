@@ -31,6 +31,7 @@ Bundle "vim-ruby/vim-ruby"
 " Bundle "tpope/vim-rvm"
 Bundle "jpo/vim-railscasts-theme"
 Bundle "ap/vim-css-color"
+Bundle "ruanyl/vim-gh-line"
 " End of bundle list
 
 filetype plugin indent on
@@ -107,6 +108,10 @@ set title
 
 " ctrlP plugin config
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
+
+" vim-gh-line config
+let g:gh_use_canonical = 1
+let g:gh_open_command = 'xdg-open '
 
 " Strip trailing whitespace
 function! <SID>StripTrailingWhitespaces()
