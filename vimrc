@@ -86,7 +86,7 @@ let mapleader = ","
 
 nnoremap <leader>b :BufExplorer<cr>
 nnoremap <leader>p :CtrlPMixed<cr>
-nnoremap <leader>a :Ack! <cword><cr>
+nnoremap <leader>a :Ack! --word-regexp <cword><cr>
 silent! nmap <silent> <leader>t :NERDTreeToggle<cr>
 
 "command aliases for when I keep shift down a bit too long after the colon
@@ -94,8 +94,8 @@ command W w
 command Q q
 
 "replace ack with ag
-if executable('ag')
-  let g:ackprg = 'ag --vimgrep'
+if executable('rg')
+  let g:ackprg = 'rg --vimgrep'
 endif
 
 "greek keymap, CTRL+6 to switch
@@ -107,6 +107,7 @@ set imsearch=-1
 set title
 
 " ctrlP plugin config
+let g:ctrlp_root_markers = ['docker-compose.yml', 'Gemfile']
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
 
 " vim-gh-line config
