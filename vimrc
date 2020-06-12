@@ -128,3 +128,6 @@ function! <SID>StripTrailingWhitespaces()
 endfunction
 autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
 
+" Svelte as html
+au! BufNewFile,BufRead *.svelte set ft=html
+
