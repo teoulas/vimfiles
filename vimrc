@@ -32,6 +32,7 @@ Bundle "vim-ruby/vim-ruby"
 Bundle "jpo/vim-railscasts-theme"
 Bundle "ap/vim-css-color"
 Bundle "ruanyl/vim-gh-line"
+Bundle "pechorin/any-jump.vim"
 " End of bundle list
 
 filetype plugin indent on
@@ -96,6 +97,11 @@ command Q q
 "replace ack with ag
 if executable('rg')
   let g:ackprg = 'rg --vimgrep'
+endif
+
+"fixes background color erase issue: https://sw.kovidgoyal.net/kitty/faq.html#id3
+if $TERM == 'xterm-kitty'
+  let &t_ut=''
 endif
 
 "greek keymap, CTRL+6 to switch
